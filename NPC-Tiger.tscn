@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://art/Sprites_NPC/NPC-tiger.png" type="Texture" id=1]
+[ext_resource path="res://NPC-Tiger.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 240, 0, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 240, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 240, 240, 240, 240 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "tiger",
+"speed": 3.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 36.6859
+height = 57.8077
+
+[node name="Fiona" type="StaticBody2D" groups=[
+"NPCs",
+]]
+pause_mode = 2
+script = ExtResource( 2 )
+mouse_out = Color( 1, 1, 1, 1 )
+mouse_over = Color( 0.768627, 1, 0.945098, 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1.05775, -0.221969 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 5 )
+animation = "tiger"
+frame = 3
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 2.80317, 33.1987 )
+scale = Vector2( 2.33109, -1.33337 )
+polygon = PoolVector2Array( -4.39033, -0.775427, -7.36636, -1.09076, -9.2602, -9.28927, -10.0718, -14.9652, -9.07983, -17.9608, -7.45654, -19.2221, 1.56173, -18.9068, 7.24325, -18.2761, 10.1291, -16.6995, 9.94873, -10.0776, 6.73368, -1.3391, 5.4915, -1.14575, 1.65192, -0.617767, -1.50448, -0.617767 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1.7818, -1.33634 )
+shape = SubResource( 6 )
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_Area2D_mouse_exited"]

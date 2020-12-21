@@ -1,0 +1,5 @@
+{
+"001" : {"name:":"Hero","expression":"neutral","text":"Znalazłeś coś?"},
+"002" : {"name:":"Chomik","expression":"neutral","text":"Jeszcze nie. A ty?"},
+"003" : {"name:":"Hero","expression":"neutral","text":"Nie wiem czy chce Ci to powiedzieć"}
+}

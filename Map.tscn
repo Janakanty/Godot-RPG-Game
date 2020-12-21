@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://art/Map/blocks/blocks.tres" type="TileSet" id=2]
+[ext_resource path="res://NPC-Tiger.tscn" type="PackedScene" id=3]
+[ext_resource path="res://art/Map/blocks/wall.tres" type="TileSet" id=4]
+[ext_resource path="res://Cursor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://NPC-Covon.tscn" type="PackedScene" id=6]
+
+[node name="Map" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="floor" type="TileMap" parent="."]
+mode = 1
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 256, 128 )
+format = 1
+tile_data = PoolIntArray( -983044, 1, 0, -983043, 1, 0, -983042, 1, 0, -983041, 1, 0, -1048576, 1, 0, -1048575, 1, 0, -917508, 1, 0, -917507, 1, 0, -917506, 1, 0, -917505, 1, 0, -983040, 1, 0, -983039, 1, 0, -851972, 1, 0, -851971, 1, 0, -851970, 1, 0, -851969, 1, 0, -917504, 1, 0, -917503, 1, 0, -786436, 1, 0, -786435, 1, 0, -786434, 1, 0, -786433, 1, 0, -851968, 1, 0, -851967, 1, 0, -720900, 1, 0, -720899, 1, 0, -720898, 1, 0, -720897, 1, 0, -786432, 1, 0, -786431, 1, 0, -655363, 1, 0, -655362, 1, 0, -655361, 1, 0, -720896, 1, 0, -720895, 1, 0, -589827, 1, 0, -589826, 1, 0, -589825, 1, 0, -655360, 1, 0, -655359, 1, 0, -524291, 1, 0, -524290, 1, 0, -524289, 1, 0, -589824, 6, 0, -589823, 2, 0, -458755, 1, 0, -458754, 1, 0, -458753, 1, 0, -524288, 4, 0, -524287, 8, 0, -393219, 1, 0, -393218, 1, 0, -393217, 2, 0 )
+
+[node name="wall" type="TileMap" parent="."]
+mode = 1
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 256, 128 )
+format = 1
+tile_data = PoolIntArray( -589827, 3, 0, -589826, 1, 0, -589825, 1, 0, -655359, 1, 0, -524291, 2, 0, -458755, 2, 0, -393219, 2, 0 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Cursor" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( -2, 0 )
+
+[node name="Covon" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 1194.94, -317.821 )
+mouse_out = Color( 0.976471, 0.976471, 0.976471, 1 )
+mouse_over = Color( 0.952941, 0.952941, 0.952941, 1 )
+
+[node name="Fiona" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 891.696, -362.721 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 822.548, -237.986 )
