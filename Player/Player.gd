@@ -38,7 +38,7 @@ func MovementLoop(delta):
 		moving = false
 
 
-func AnimationLoop():
+func AnimationLoop():  #function for setting the appropriate animation of the player
 	var anim_direction = "S"
 	var anim_mode = "Idle"
 	var animation
@@ -50,14 +50,19 @@ func AnimationLoop():
 		anim_direction = "S"
 	elif move_direction <= 165 and move_direction >= 120:
 		anim_direction = "SW"
+		anim_mode = "Idle2"
 	elif move_direction >= -60 and move_direction <= -15:
 		anim_direction = "NE"
+		anim_mode = "Idle_N"
 	elif move_direction >= -120 and move_direction <= -60:
 		anim_direction = "N"
+		anim_mode = "Idle_N"
 	elif move_direction >= -165 and move_direction <= -120:
 		anim_direction = "NW"
+		anim_mode = "Idle_N2"
 	elif move_direction <= -165 or move_direction >= 165:
 		anim_direction = "W"
+		anim_mode = "Idle2"
 		
 	if moving == true:
 		$AnimatedSprite.play(anim_direction)

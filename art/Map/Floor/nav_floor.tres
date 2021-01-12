@@ -1,0 +1,25 @@
+[gd_resource type="TileSet" load_steps=3 format=2]
+
+[ext_resource path="res://art/Object_Pack/Floor/black_floor_1.png" type="Texture" id=1]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 0.435944, 75.682, 131, 147.512, -0.357758, 215.373, -128.937, 147.909 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128.937, 147.909, -0.357758, 215.373, 131, 147.512, 0.435944, 75.682 ) ]
+
+[resource]
+0/name = "black_floor_1"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 256, 512 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 128, 256 )
+0/navigation_offset = Vector2( 128, 256 )
+0/navigation = SubResource( 1 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0

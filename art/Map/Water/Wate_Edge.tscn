@@ -38,10 +38,11 @@ animations = [ {
 [node name="Water_Edge" type="StaticBody2D"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
 polygon = PoolVector2Array( -0.429688, -80.873, -117.602, -20.3968, 1.46021, 45.119, 121.153, -15.3571 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
-frame = 1
+frame = 2
 speed_scale = 0.4
 playing = true

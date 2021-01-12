@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://art/Object_Pack/Water/water2_2sides.png" type="Texture" id=1]
+[ext_resource path="res://art/Object_Pack/Water/water_beetween.png" type="Texture" id=1]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -35,13 +35,13 @@ animations = [ {
 "speed": 2.0
 } ]
 
-[node name="Water_Edge_Center" type="StaticBody2D"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -1.02036, -82.7722, 117.774, -19.1326, 1.80807, 41.6786, -118.4, -14.8899 )
+[node name="Water_between_water" type="StaticBody2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
-frame = 1
 speed_scale = 0.4
 playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -1.61667, -79.4408, -119.601, -17.6171, 1.68689, 44.6787, 118.255, -19.0329 )

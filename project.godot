@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="ChodzeniePoMapie"
+config/name="Cavernus"
 run/main_scene="res://Map.tscn"
 boot_splash/bg_color=Color( 0.956863, 0.321569, 0.321569, 1 )
 config/icon="res://icon.png"
