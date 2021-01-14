@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://art/Map/Walls/Wall_SE.gd" type="Script" id=1]
+[ext_resource path="res://art/Object_Pack/Wall/wall_in_nowhere.png" type="Texture" id=2]
+
+[node name="Wall_on_other_side" type="StaticBody2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -0.572052, 74.5837, -120.818, 13.0719, -120.421, -17.8824, -0.175201, -74.632, 118.88, -24.6289, 119.674, 14.6593 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PoolVector2Array( -121.611, -62.7265, -120.818, -11.9297, -0.175201, 26.168, 119.674, -19.073, 118.88, -71.0603, 1.01535, -127.016 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

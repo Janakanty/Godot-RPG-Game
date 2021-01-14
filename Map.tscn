@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/Map/Floor/Grey_Floor.tres" type="TileSet" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://art/Map/Water/Water_between_water.tscn" type="PackedScene" id=10]
 [ext_resource path="res://art/Map/Water/water_static.tscn" type="PackedScene" id=11]
 [ext_resource path="res://art/Map/1lv_object/background/lightrock1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://art/Map/Walls/Wall_on_other_side.tscn" type="PackedScene" id=13]
 
 [node name="Map" type="Node2D"]
 __meta__ = {
@@ -23,11 +24,29 @@ mode = 1
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 256, 129 )
 format = 1
-tile_data = PoolIntArray( -720899, 0, 0, -720898, 0, 0, -655363, 0, 0, -655362, 0, 0, -655361, 0, 0, -589828, 0, 0, -589827, 0, 0, -589826, 0, 0, -589825, 0, 0, -655360, 0, 0, -524291, 0, 0, -524290, 0, 0, -524289, 0, 0, -589824, 0, 0, -458755, 0, 0, -458754, 0, 0, -458753, 0, 0 )
+tile_data = PoolIntArray( -720899, 0, 0, -720898, 0, 0, -655363, 0, 0, -655362, 0, 0, -655361, 0, 0, -589827, 0, 0, -589826, 0, 0, -589825, 0, 0, -655360, 0, 0, -524291, 0, 0, -524290, 0, 0, -524289, 0, 0, -589824, 0, 0, -458755, 0, 0, -458754, 0, 0, -458753, 0, 0 )
 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Wall" type="YSort" parent="YSort"]
+
+[node name="Wall_on_other_side3" parent="YSort/Wall" instance=ExtResource( 13 )]
+position = Vector2( 1410.17, -296.983 )
+
+[node name="Wall_on_other_side5" parent="YSort/Wall" instance=ExtResource( 13 )]
+position = Vector2( 1498.15, -221.134 )
+
+[node name="Wall_on_other_side4" parent="YSort/Wall" instance=ExtResource( 13 )]
+position = Vector2( 1419.22, -448.099 )
+
+[node name="Wall_on_other_side" parent="YSort/Wall/Wall_on_other_side4" instance=ExtResource( 13 )]
+position = Vector2( 77.3821, 80.4013 )
+
+[node name="Wall_on_other_side2" parent="YSort/Wall" instance=ExtResource( 13 )]
+position = Vector2( 1385.85, -162.733 )
+
+[node name="Wall_on_other_side" parent="YSort/Wall" instance=ExtResource( 13 )]
+position = Vector2( 1272.75, -107.234 )
 
 [node name="Wall_SE4" parent="YSort/Wall" instance=ExtResource( 7 )]
 position = Vector2( 894.609, -492.609 )
@@ -47,7 +66,8 @@ position = Vector2( 1154.38, -596.266 )
 [node name="Water" type="YSort" parent="YSort"]
 
 [node name="StaticBody2D" parent="YSort/Water" instance=ExtResource( 12 )]
-position = Vector2( 1093.16, -260.666 )
+position = Vector2( 985.724, -274.014 )
+scale = Vector2( 0.7, 0.7 )
 
 [node name="Water_Edge3" parent="YSort/Water" instance=ExtResource( 8 )]
 position = Vector2( 538.984, -207.201 )
@@ -75,6 +95,9 @@ position = Vector2( 1139.74, -36.9903 )
 
 [node name="water_static5" parent="YSort/Water" instance=ExtResource( 11 )]
 position = Vector2( 784.853, 21.6286 )
+
+[node name="water_static16" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 782.112, 263.138 )
 
 [node name="water_static15" parent="YSort/Water" instance=ExtResource( 11 )]
 position = Vector2( 196.144, -162.144 )
@@ -106,8 +129,77 @@ position = Vector2( 427.674, -165.177 )
 [node name="water_static2" parent="YSort/Water" instance=ExtResource( 11 )]
 position = Vector2( 665.262, -40.9971 )
 
+[node name="water_static17" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 1258.79, 24.9341 )
+
+[node name="water_static20" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 902.941, 203.233 )
+
+[node name="water_static19" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 1018.31, 147.046 )
+
+[node name="water_static18" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 1138.92, 86.3647 )
+
+[node name="water_static21" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 661, 203 )
+
 [node name="water_static3" parent="YSort/Water" instance=ExtResource( 11 )]
 position = Vector2( 545.585, -103.983 )
+
+[node name="water_static24" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 318.122, 24.4388 )
+
+[node name="water_static25" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 201.878, -37.6837 )
+
+[node name="water_static23" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 437, 87 )
+
+[node name="water_static26" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 79.3273, -98 )
+
+[node name="water_static28" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 542.491, 263.021 )
+
+[node name="water_static29" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 423.538, 202.204 )
+
+[node name="water_static30" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 303.844, 139.501 )
+
+[node name="water_static31" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 186.781, 77.0506 )
+
+[node name="water_static32" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 67.2633, 14.6543 )
+
+[node name="water_static33" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( -38.7437, -39.4316 )
+
+[node name="water_static34" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 1377.92, 84.7359 )
+
+[node name="water_static36" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 1138.06, 206.529 )
+
+[node name="water_static37" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 1017.39, 266.751 )
+
+[node name="water_static39" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 781.298, 384.911 )
+
+[node name="water_static38" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 899.03, 325.45 )
+
+[node name="water_static35" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 1256.98, 143.501 )
+
+[node name="water_static27" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 662.216, 323.008 )
+
+[node name="water_static22" parent="YSort/Water" instance=ExtResource( 11 )]
+position = Vector2( 557, 149 )
 
 [node name="Cursor" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( -2, 0 )
