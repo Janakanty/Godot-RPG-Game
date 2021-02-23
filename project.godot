@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 [autoload]
 
 global="*res://global.gd"
+DataImport="*res://Data/DataImport.gd"
 
 [display]
 

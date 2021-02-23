@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/water_beetween.png-5ffb288cfee77f1a516470497271181a.stex"
+path="res://.import/water_beetween.png-08de3e9b639930955b00bb9e7cf699a9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Object_Pack/Water/water_beetween.png"
-dest_files=[ "res://.import/water_beetween.png-5ffb288cfee77f1a516470497271181a.stex" ]
+source_file="res://Art/Object_Pack/Water/water_beetween.png"
+dest_files=[ "res://.import/water_beetween.png-08de3e9b639930955b00bb9e7cf699a9.stex" ]
 
 [params]
 

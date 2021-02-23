@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StayHero2.png-f814bacce1aba900f407ce79c9149edc.stex"
+path="res://.import/StayHero2.png-bf1db936d85d95a9582cfd15625fd18d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Sprites/StayHero2.png"
-dest_files=[ "res://.import/StayHero2.png-f814bacce1aba900f407ce79c9149edc.stex" ]
+source_file="res://Art/Sprites/StayHero2.png"
+dest_files=[ "res://.import/StayHero2.png-bf1db936d85d95a9582cfd15625fd18d.stex" ]
 
 [params]
 

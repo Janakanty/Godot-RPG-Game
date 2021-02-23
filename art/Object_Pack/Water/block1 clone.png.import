@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/block1 clone.png-bee5ac97e40f2ccef90119017108dc91.stex"
+path="res://.import/block1 clone.png-5ebb09e8e9b90d69d999cc510330c76d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Object_Pack/Water/block1 clone.png"
-dest_files=[ "res://.import/block1 clone.png-bee5ac97e40f2ccef90119017108dc91.stex" ]
+source_file="res://Art/Object_Pack/Water/block1 clone.png"
+dest_files=[ "res://.import/block1 clone.png-5ebb09e8e9b90d69d999cc510330c76d.stex" ]
 
 [params]
 

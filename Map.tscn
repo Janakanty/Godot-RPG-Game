@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/Map/Floor/Grey_Floor.tres" type="TileSet" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://art/Map/Water/water_static.tscn" type="PackedScene" id=11]
 [ext_resource path="res://art/Map/1lv_object/background/lightrock1.tscn" type="PackedScene" id=12]
 [ext_resource path="res://art/Map/Walls/Wall_on_other_side.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Enemy/enemy1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://podlogatest.tscn" type="PackedScene" id=15]
+[ext_resource path="res://podloga4.png" type="Texture" id=16]
 
 [node name="Map" type="Node2D"]
 __meta__ = {
@@ -30,23 +33,23 @@ tile_data = PoolIntArray( -720899, 0, 0, -720898, 0, 0, -655363, 0, 0, -655362, 
 
 [node name="Wall" type="YSort" parent="YSort"]
 
-[node name="Wall_on_other_side3" parent="YSort/Wall" instance=ExtResource( 13 )]
-position = Vector2( 1410.17, -296.983 )
-
-[node name="Wall_on_other_side5" parent="YSort/Wall" instance=ExtResource( 13 )]
-position = Vector2( 1498.15, -221.134 )
-
 [node name="Wall_on_other_side4" parent="YSort/Wall" instance=ExtResource( 13 )]
 position = Vector2( 1419.22, -448.099 )
 
+[node name="Wall_on_other_side5" parent="YSort/Wall/Wall_on_other_side4" instance=ExtResource( 13 )]
+position = Vector2( 4.59485, -69.1165 )
+
+[node name="Wall_on_other_side3" parent="YSort/Wall/Wall_on_other_side4" instance=ExtResource( 13 )]
+position = Vector2( -1.49036, 79.3004 )
+
+[node name="Wall_on_other_side2" parent="YSort/Wall/Wall_on_other_side4" instance=ExtResource( 13 )]
+position = Vector2( -146.47, 340.865 )
+
+[node name="Wall_on_other_side4" parent="YSort/Wall/Wall_on_other_side4" instance=ExtResource( 13 )]
+position = Vector2( 0.648071, -78.7512 )
+
 [node name="Wall_on_other_side" parent="YSort/Wall/Wall_on_other_side4" instance=ExtResource( 13 )]
-position = Vector2( 77.3821, 80.4013 )
-
-[node name="Wall_on_other_side2" parent="YSort/Wall" instance=ExtResource( 13 )]
-position = Vector2( 1385.85, -162.733 )
-
-[node name="Wall_on_other_side" parent="YSort/Wall" instance=ExtResource( 13 )]
-position = Vector2( 1272.75, -107.234 )
+position = Vector2( 5.56692, -155.204 )
 
 [node name="Wall_SE4" parent="YSort/Wall" instance=ExtResource( 7 )]
 position = Vector2( 894.609, -492.609 )
@@ -66,7 +69,7 @@ position = Vector2( 1154.38, -596.266 )
 [node name="Water" type="YSort" parent="YSort"]
 
 [node name="StaticBody2D" parent="YSort/Water" instance=ExtResource( 12 )]
-position = Vector2( 985.724, -274.014 )
+position = Vector2( 1122.55, -215.948 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Water_Edge3" parent="YSort/Water" instance=ExtResource( 8 )]
@@ -201,6 +204,9 @@ position = Vector2( 662.216, 323.008 )
 [node name="water_static22" parent="YSort/Water" instance=ExtResource( 11 )]
 position = Vector2( 557, 149 )
 
+[node name="Papu" parent="YSort/Water" instance=ExtResource( 14 )]
+position = Vector2( 1149.25, -545.92 )
+
 [node name="Cursor" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( -2, 0 )
 z_index = 20
@@ -209,7 +215,27 @@ z_index = 20
 position = Vector2( 1363.7, -826.985 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 1149.23, -284.554 )
+position = Vector2( 976.541, -323.179 )
+
+[node name="podloga4" type="Sprite" parent="YSort/Player"]
+position = Vector2( 490.436, 63.9093 )
+texture = ExtResource( 16 )
+
+[node name="podloga5" type="Sprite" parent="YSort/Player"]
+position = Vector2( 610.546, 125.748 )
+texture = ExtResource( 16 )
+
+[node name="Sprite" parent="YSort/Player" instance=ExtResource( 15 )]
+position = Vector2( 730.656, 188.776 )
+
+[node name="Sprite2" parent="YSort/Player" instance=ExtResource( 15 )]
+position = Vector2( 370.326, 125.748 )
+
+[node name="Sprite3" parent="YSort/Player" instance=ExtResource( 15 )]
+position = Vector2( 489.247, 188.776 )
+
+[node name="Sprite4" parent="YSort/Player" instance=ExtResource( 15 )]
+position = Vector2( 610.546, 251.804 )
 
 [node name="Fiona" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 1566.63, -740.124 )
+position = Vector2( 1924.58, -974.398 )

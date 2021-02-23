@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wall_in_nowhere.png-0c209fa89d115f2fcb167a0bc6941171.stex"
+path="res://.import/wall_in_nowhere.png-01da75f436effff25c4216b26fc9c576.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Object_Pack/Wall/wall_in_nowhere.png"
-dest_files=[ "res://.import/wall_in_nowhere.png-0c209fa89d115f2fcb167a0bc6941171.stex" ]
+source_file="res://Art/Object_Pack/Wall/wall_in_nowhere.png"
+dest_files=[ "res://.import/wall_in_nowhere.png-01da75f436effff25c4216b26fc9c576.stex" ]
 
 [params]
 

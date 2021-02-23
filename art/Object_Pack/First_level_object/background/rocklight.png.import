@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rocklight.png-db4e0ca36ff06fe5a9c411c23636420e.stex"
+path="res://.import/rocklight.png-6192e75270b55d231dc76f6e1286a076.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Object_Pack/First_level_object/background/rocklight.png"
-dest_files=[ "res://.import/rocklight.png-db4e0ca36ff06fe5a9c411c23636420e.stex" ]
+source_file="res://Art/Object_Pack/First_level_object/background/rocklight.png"
+dest_files=[ "res://.import/rocklight.png-6192e75270b55d231dc76f6e1286a076.stex" ]
 
 [params]
 

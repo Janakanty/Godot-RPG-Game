@@ -1,0 +1,12 @@
+{
+"NoWeapon": {
+ "SkillName":"NoWeapon",
+ "SkillType":"MeleeAttack",
+ "SkillDamage":"100",
+ "SkillProjectileSpeed":"N/A",
+ "SkillDamageDelayTime":"N/A",
+ "SkillRemoveDelayTime":"N/A",
+ "SkillExpansionTime":"N/A",
+ "SkillHeal":"N/A"
+}
+}
