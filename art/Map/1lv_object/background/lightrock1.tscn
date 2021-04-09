@@ -46,8 +46,10 @@ scale = Vector2( 0.5, 0.5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0.294312, 81.9185 )
 frames = SubResource( 7 )
+frame = 2
 playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-polygon = PoolVector2Array( 52.9013, 72.4887, 23.2028, 77.4384, -31.2444, 75.3171, -59.5287, 63.2963, -75.0851, 50.5684, -54.5789, 34.3049, -36.9013, 30.7694, 33.1023, 35.7191, 54.3155, 42.7902 )
+position = Vector2( -5.39148, 0 )
+scale = Vector2( 0.952667, 1 )
+polygon = PoolVector2Array( 52.9013, 72.4887, 23.2028, 77.4384, -31.2444, 75.3171, -59.5287, 63.2963, -64.5419, 46.7289, -54.5789, 34.3049, -36.9013, 30.7694, 33.1023, 35.7191, 54.3155, 42.7902 )

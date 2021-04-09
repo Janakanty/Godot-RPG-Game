@@ -1,0 +1,2107 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://art/Equipment/edge.png" type="Texture" id=1]
+[ext_resource path="res://art/Equipment/exit.png" type="Texture" id=2]
+[ext_resource path="res://art/Equipment/background.png" type="Texture" id=3]
+[ext_resource path="res://addons/dialogs/PressStart2P-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://art/Equipment/background-darknes.png" type="Texture" id=5]
+[ext_resource path="res://addons/dialogs/Fonts/DefaultFont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://art/Equipment/slot.png" type="Texture" id=7]
+[ext_resource path="res://art/Equipment/exp.png" type="Texture" id=8]
+[ext_resource path="res://art/Equipment/out.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Inventory" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DoubleEdgedBackground" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 30.0
+margin_right = -30.0
+margin_bottom = -30.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PaperBackground" type="TextureRect" parent="DoubleEdgedBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_top = 15.0
+margin_right = -15.0
+margin_bottom = -15.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DoubleEdgedBackground/PaperBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Header" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer"]
+margin_right = 1332.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+
+[node name="MenuTitle" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/Header"]
+margin_right = 1278.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = " Ekwipunek"
+valign = 1
+
+[node name="ExitButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/Header"]
+margin_left = 1282.0
+margin_right = 1332.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="MainElements" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer"]
+margin_top = 54.0
+margin_right = 1332.0
+margin_bottom = 696.0
+size_flags_vertical = 3
+
+[node name="LeftMargin" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements"]
+margin_top = 314.0
+margin_right = 20.0
+margin_bottom = 328.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="Tabs" type="VBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements"]
+margin_left = 24.0
+margin_right = 216.0
+margin_bottom = 642.0
+rect_min_size = Vector2( 180, 0 )
+
+[node name="Weapons" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Tabs"]
+margin_right = 192.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 180, 70 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Weapons" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Tabs/Weapons"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Tabs/Weapons/Weapons"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Broń"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Armor" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Tabs"]
+margin_top = 74.0
+margin_right = 192.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 180, 70 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Weapons" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Tabs/Armor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Tabs/Armor/Weapons"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Ubranie"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Object" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Tabs"]
+margin_top = 148.0
+margin_right = 192.0
+margin_bottom = 218.0
+rect_min_size = Vector2( 180, 70 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Weapons" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Tabs/Object"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Tabs/Object/Weapons"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 2.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Przed"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoldText" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Tabs"]
+margin_top = 222.0
+margin_right = 192.0
+margin_bottom = 414.0
+rect_min_size = Vector2( 180, 90 )
+texture = ExtResource( 8 )
+
+[node name="GoldCounter" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Tabs"]
+margin_top = 418.0
+margin_right = 192.0
+margin_bottom = 442.0
+custom_fonts/font = ExtResource( 6 )
+text = "34.12"
+align = 1
+valign = 1
+
+[node name="Weapons" type="ScrollContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements"]
+visible = false
+margin_left = 220.0
+margin_right = 606.0
+margin_bottom = 642.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons"]
+margin_right = 386.0
+margin_bottom = 810.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="101" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer"]
+margin_right = 374.0
+margin_bottom = 70.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/101"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/101/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/101/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/101"]
+margin_left = 74.0
+margin_right = 374.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="102" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer"]
+margin_top = 74.0
+margin_right = 374.0
+margin_bottom = 144.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/102"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/102/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/102/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/102"]
+margin_left = 74.0
+margin_right = 374.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="103" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer"]
+margin_top = 148.0
+margin_right = 374.0
+margin_bottom = 218.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/103"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/103/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/103/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/103"]
+margin_left = 74.0
+margin_right = 374.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="104" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer"]
+margin_top = 222.0
+margin_right = 374.0
+margin_bottom = 292.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/104"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/104/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/104/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/104"]
+margin_left = 74.0
+margin_right = 374.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="105" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer"]
+margin_top = 296.0
+margin_right = 374.0
+margin_bottom = 366.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/105"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/105/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/105/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/105"]
+margin_left = 74.0
+margin_right = 374.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="106" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer"]
+margin_top = 370.0
+margin_right = 374.0
+margin_bottom = 440.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/106"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/106/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/106/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/106"]
+margin_left = 74.0
+margin_right = 374.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="107" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer"]
+margin_top = 444.0
+margin_right = 374.0
+margin_bottom = 514.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/107"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/107/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/107/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/107"]
+margin_left = 74.0
+margin_right = 374.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="108" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer"]
+margin_top = 518.0
+margin_right = 374.0
+margin_bottom = 588.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/108"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/108/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/108/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/108"]
+margin_left = 74.0
+margin_right = 374.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="109" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer"]
+margin_top = 592.0
+margin_right = 374.0
+margin_bottom = 662.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/109"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/109/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/109/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/109"]
+margin_left = 74.0
+margin_right = 374.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="110" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer"]
+margin_top = 666.0
+margin_right = 374.0
+margin_bottom = 736.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/110"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/110/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/110/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/110"]
+margin_left = 74.0
+margin_right = 374.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="111" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer"]
+margin_top = 740.0
+margin_right = 374.0
+margin_bottom = 810.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/111"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/111/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/111/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Weapons/VBoxContainer/111"]
+margin_left = 74.0
+margin_right = 374.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="Armor" type="ScrollContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements"]
+margin_left = 220.0
+margin_right = 968.0
+margin_bottom = 642.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor"]
+margin_right = 736.0
+margin_bottom = 884.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="201" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer"]
+margin_right = 736.0
+margin_bottom = 70.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/201"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/201/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/201/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/201"]
+margin_left = 74.0
+margin_right = 736.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="202" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer"]
+margin_top = 74.0
+margin_right = 736.0
+margin_bottom = 144.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/202"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/202/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/202/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/202"]
+margin_left = 74.0
+margin_right = 736.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="203" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer"]
+margin_top = 148.0
+margin_right = 736.0
+margin_bottom = 218.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/203"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/203/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/203/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/203"]
+margin_left = 74.0
+margin_right = 736.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="204" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer"]
+margin_top = 222.0
+margin_right = 736.0
+margin_bottom = 292.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/204"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/204/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/204/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/204"]
+margin_left = 74.0
+margin_right = 736.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="205" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer"]
+margin_top = 296.0
+margin_right = 736.0
+margin_bottom = 366.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/205"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/205/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/205/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/205"]
+margin_left = 74.0
+margin_right = 736.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="206" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer"]
+margin_top = 370.0
+margin_right = 736.0
+margin_bottom = 440.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/206"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/206/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/206/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/206"]
+margin_left = 74.0
+margin_right = 736.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="207" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer"]
+margin_top = 444.0
+margin_right = 736.0
+margin_bottom = 514.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/207"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/207/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/207/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/207"]
+margin_left = 74.0
+margin_right = 736.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="208" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer"]
+margin_top = 518.0
+margin_right = 736.0
+margin_bottom = 588.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/208"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/208/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/208/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/208"]
+margin_left = 74.0
+margin_right = 736.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="209" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer"]
+margin_top = 592.0
+margin_right = 736.0
+margin_bottom = 662.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/209"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/209/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/209/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/209"]
+margin_left = 74.0
+margin_right = 736.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="210" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer"]
+margin_top = 666.0
+margin_right = 736.0
+margin_bottom = 736.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/210"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/210/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/210/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/210"]
+margin_left = 74.0
+margin_right = 736.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="211" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer"]
+margin_top = 740.0
+margin_right = 736.0
+margin_bottom = 810.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/211"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/211/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/211/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/211"]
+margin_left = 74.0
+margin_right = 736.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="212" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer"]
+margin_top = 814.0
+margin_right = 736.0
+margin_bottom = 884.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/212"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/212/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/212/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Armor/VBoxContainer/212"]
+margin_left = 74.0
+margin_right = 736.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="Items" type="ScrollContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements"]
+visible = false
+margin_left = 614.0
+margin_right = 1004.0
+margin_bottom = 642.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items"]
+margin_right = 390.0
+margin_bottom = 884.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="301" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer"]
+margin_right = 378.0
+margin_bottom = 70.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/301"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/301/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/301/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/301"]
+margin_left = 74.0
+margin_right = 378.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="302" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer"]
+margin_top = 74.0
+margin_right = 378.0
+margin_bottom = 144.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/302"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/302/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/302/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/302"]
+margin_left = 74.0
+margin_right = 378.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="303" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer"]
+margin_top = 148.0
+margin_right = 378.0
+margin_bottom = 218.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/303"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/303/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/303/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/303"]
+margin_left = 74.0
+margin_right = 378.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="304" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer"]
+margin_top = 222.0
+margin_right = 378.0
+margin_bottom = 292.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/304"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/304/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/304/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/304"]
+margin_left = 74.0
+margin_right = 378.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="305" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer"]
+margin_top = 296.0
+margin_right = 378.0
+margin_bottom = 366.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/305"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/305/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/305/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/305"]
+margin_left = 74.0
+margin_right = 378.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="306" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer"]
+margin_top = 370.0
+margin_right = 378.0
+margin_bottom = 440.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/306"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/306/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/306/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/306"]
+margin_left = 74.0
+margin_right = 378.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="307" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer"]
+margin_top = 444.0
+margin_right = 378.0
+margin_bottom = 514.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/307"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/307/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/307/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/307"]
+margin_left = 74.0
+margin_right = 378.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="308" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer"]
+margin_top = 518.0
+margin_right = 378.0
+margin_bottom = 588.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/308"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/308/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/308/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/308"]
+margin_left = 74.0
+margin_right = 378.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="309" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer"]
+margin_top = 592.0
+margin_right = 378.0
+margin_bottom = 662.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/309"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/309/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/309/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/309"]
+margin_left = 74.0
+margin_right = 378.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="310" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer"]
+margin_top = 666.0
+margin_right = 378.0
+margin_bottom = 736.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/310"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/310/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/310/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/310"]
+margin_left = 74.0
+margin_right = 378.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="311" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer"]
+margin_top = 740.0
+margin_right = 378.0
+margin_bottom = 810.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/311"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/311/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/311/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/311"]
+margin_left = 74.0
+margin_right = 378.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="312" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer"]
+margin_top = 814.0
+margin_right = 378.0
+margin_bottom = 884.0
+
+[node name="ItemBackground" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/312"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="ItemButton" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/312/ItemBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -715.0
+margin_bottom = -1.0
+rect_min_size = Vector2( 65, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/312/ItemBackground/ItemButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -66.0
+margin_top = -35.0
+rect_min_size = Vector2( 65, 35 )
+custom_fonts/font = ExtResource( 6 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/Items/VBoxContainer/312"]
+margin_left = 74.0
+margin_right = 378.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+valign = 1
+
+[node name="ItemInspector" type="VBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements"]
+margin_left = 972.0
+margin_right = 1308.0
+margin_bottom = 642.0
+rect_min_size = Vector2( 300, 0 )
+
+[node name="ItemInspector1" type="VBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector"]
+margin_right = 336.0
+margin_bottom = 514.0
+size_flags_vertical = 3
+
+[node name="ItemName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/ItemInspector1"]
+margin_right = 336.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 6 )
+text = "Item inspector"
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/ItemInspector1"]
+margin_top = 28.0
+margin_right = 336.0
+margin_bottom = 514.0
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/ItemInspector1/HBoxContainer"]
+margin_right = 262.0
+margin_bottom = 486.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Stats" type="VBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/ItemInspector1/HBoxContainer/ScrollContainer"]
+margin_right = 262.0
+margin_bottom = 486.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Attack" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/ItemInspector1/HBoxContainer/ScrollContainer/Stats"]
+margin_right = 262.0
+margin_bottom = 24.0
+
+[node name="StatName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/ItemInspector1/HBoxContainer/ScrollContainer/Stats/Attack"]
+margin_right = 186.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Atak"
+
+[node name="StatValue" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/ItemInspector1/HBoxContainer/ScrollContainer/Stats/Attack"]
+margin_left = 190.0
+margin_right = 262.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 6 )
+text = "800"
+
+[node name="Defence" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/ItemInspector1/HBoxContainer/ScrollContainer/Stats"]
+margin_top = 28.0
+margin_right = 262.0
+margin_bottom = 52.0
+
+[node name="StatName" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/ItemInspector1/HBoxContainer/ScrollContainer/Stats/Defence"]
+margin_right = 186.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Obrona"
+
+[node name="StatValue" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/ItemInspector1/HBoxContainer/ScrollContainer/Stats/Defence"]
+margin_left = 190.0
+margin_right = 262.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 6 )
+text = "800"
+
+[node name="ItemIcon" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/ItemInspector1/HBoxContainer"]
+margin_left = 266.0
+margin_right = 336.0
+margin_bottom = 486.0
+rect_min_size = Vector2( 70, 70 )
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector"]
+margin_top = 518.0
+margin_right = 336.0
+margin_bottom = 538.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="Buttons" type="HBoxContainer" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector"]
+margin_top = 542.0
+margin_right = 336.0
+margin_bottom = 642.0
+
+[node name="TrashBin" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/Buttons"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+texture_normal = ExtResource( 9 )
+expand = true
+
+[node name="Compare" type="TextureRect" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/Buttons"]
+margin_left = 104.0
+margin_top = 15.0
+margin_right = 284.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 180, 70 )
+size_flags_vertical = 4
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Compare" type="TextureButton" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/Buttons/Compare"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements/ItemInspector/Buttons/Compare/Compare"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Compare"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightMargin" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer/MainElements"]
+margin_left = 1312.0
+margin_top = 314.0
+margin_right = 1332.0
+margin_bottom = 328.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="BottomMargin" type="Label" parent="DoubleEdgedBackground/PaperBackground/VBoxContainer"]
+margin_top = 700.0
+margin_right = 1332.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 0, 20 )

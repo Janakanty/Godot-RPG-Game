@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://art/Object_Pack/First_level_object/background/dziura1.png" type="Texture" id=1]
+
+[node name="Node2D" type="StaticBody2D"]
+position = Vector2( -11.8276, -44.1963 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 12.7596, 130.501 )
+texture = ExtResource( 1 )

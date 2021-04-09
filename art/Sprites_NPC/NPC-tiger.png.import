@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NPC-tiger.png-66299496b0e0993d2ef17e4759b29173.stex"
+path="res://.import/NPC-tiger.png-f05f51187b0663d1455facd28dc2c40a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Sprites_NPC/NPC-tiger.png"
-dest_files=[ "res://.import/NPC-tiger.png-66299496b0e0993d2ef17e4759b29173.stex" ]
+source_file="res://art/Sprites_NPC/NPC-tiger.png"
+dest_files=[ "res://.import/NPC-tiger.png-f05f51187b0663d1455facd28dc2c40a.stex" ]
 
 [params]
 

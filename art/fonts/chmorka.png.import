@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chmorka.png-44c5cdeecb8fcab7b8abc66dd9a00e86.stex"
+path="res://.import/chmorka.png-1e872da096c98edcb042f7244f047fc2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/fonts/chmorka.png"
-dest_files=[ "res://.import/chmorka.png-44c5cdeecb8fcab7b8abc66dd9a00e86.stex" ]
+source_file="res://art/fonts/chmorka.png"
+dest_files=[ "res://.import/chmorka.png-1e872da096c98edcb042f7244f047fc2.stex" ]
 
 [params]
 

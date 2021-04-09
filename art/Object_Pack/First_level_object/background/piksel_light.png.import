@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/piksel_light.png-9c7f7da66c82d9b00da8117c9b8178da.stex"
+path="res://.import/piksel_light.png-36073b1eaada8f95834840761f7c10be.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Object_Pack/First_level_object/background/piksel_light.png"
-dest_files=[ "res://.import/piksel_light.png-9c7f7da66c82d9b00da8117c9b8178da.stex" ]
+source_file="res://art/Object_Pack/First_level_object/background/piksel_light.png"
+dest_files=[ "res://.import/piksel_light.png-36073b1eaada8f95834840761f7c10be.stex" ]
 
 [params]
 

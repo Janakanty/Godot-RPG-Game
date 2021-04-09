@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://art/Object_Pack/First_level_object/background/stalaktyt1.png" type="Texture" id=1]
+
+[node name="Node2D" type="StaticBody2D"]
+position = Vector2( -11.8276, -44.1963 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -86.0184, -48.3673 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -1.20855, 7.97038 )
+scale = Vector2( 1, 0.928977 )
+polygon = PoolVector2Array( -75.3654, 15.9328, -58.6977, 27.0446, -36.4739, 34.1876, -12.663, 30.2194, 8.05483, 21.0064, -2.34488, 10.3769, -34.0929, -0.734936, -65.841, 4.02727 )

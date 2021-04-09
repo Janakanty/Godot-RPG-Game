@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Panels/quest/Quests.gd" type="Script" id=1]
+[ext_resource path="res://addons/dialogs/Fonts/DefaultFont.tres" type="DynamicFont" id=2]
+
+[node name="Control" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 59.6362
+margin_top = 37.1118
+margin_right = -1075.36
+margin_bottom = -635.888
+mouse_filter = 1
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+light_mask = 4
+margin_left = 22.2918
+margin_top = 1.6448
+margin_right = 267.292
+margin_bottom = 122.645
+color = Color( 0.141176, 0.141176, 0.141176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+light_mask = 4
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_right = -1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect/VBoxContainer"]
+margin_right = 243.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+light_mask = 4
+margin_top = 18.0
+margin_right = 243.0
+margin_bottom = 144.0
+custom_fonts/font = ExtResource( 2 )
+text = "Zabij potwora!"
+align = 1
+autowrap = true
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer"]
+margin_top = 148.0
+margin_right = 243.0
+margin_bottom = 148.0
+color = Color( 0.501961, 0.501961, 0.501961, 1 )

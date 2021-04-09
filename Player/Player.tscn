@@ -1,561 +1,572 @@
-[gd_scene load_steps=160 format=2]
+[gd_scene load_steps=163 format=2]
 
-[ext_resource path="res://art/Sprites/SE.png" type="Texture" id=1]
-[ext_resource path="res://art/Sprites/SW.png" type="Texture" id=2]
-[ext_resource path="res://art/Sprites/E.png" type="Texture" id=3]
+[ext_resource path="res://art/Sprites/Common/SE.png" type="Texture" id=1]
+[ext_resource path="res://art/Sprites/Common/SW.png" type="Texture" id=2]
+[ext_resource path="res://art/Sprites/Common/E.png" type="Texture" id=3]
 [ext_resource path="res://Player/Player.gd" type="Script" id=4]
-[ext_resource path="res://art/Sprites/W.png" type="Texture" id=5]
-[ext_resource path="res://art/Sprites/NW.png" type="Texture" id=6]
-[ext_resource path="res://art/Sprites/N.png" type="Texture" id=7]
-[ext_resource path="res://art/Sprites/stophero.png" type="Texture" id=8]
-[ext_resource path="res://art/Sprites/NE.png" type="Texture" id=9]
-[ext_resource path="res://art/Sprites/S.png" type="Texture" id=10]
-[ext_resource path="res://art/Sprites/Stay_Hero_N.png" type="Texture" id=11]
-[ext_resource path="res://art/Sprites/Stay_Hero_N2.png" type="Texture" id=12]
-[ext_resource path="res://art/Sprites/StayHero2.png" type="Texture" id=13]
+[ext_resource path="res://art/Sprites/Common/W.png" type="Texture" id=5]
+[ext_resource path="res://art/Sprites/Common/NW.png" type="Texture" id=6]
+[ext_resource path="res://art/Sprites/Common/N.png" type="Texture" id=7]
+[ext_resource path="res://art/Sprites/Common/StayHero_SE.png" type="Texture" id=8]
+[ext_resource path="res://art/Sprites/Common/NE.png" type="Texture" id=9]
+[ext_resource path="res://art/Sprites/Common/S.png" type="Texture" id=10]
+[ext_resource path="res://art/Sprites/Common/StayHero_NE.png" type="Texture" id=11]
+[ext_resource path="res://art/Sprites/Common/StayHero_NW.png" type="Texture" id=12]
+[ext_resource path="res://art/Sprites/Common/StayHero_SW.png" type="Texture" id=13]
 [ext_resource path="res://art/Sprites/Attack/AttackHero_1_W.png" type="Texture" id=14]
 [ext_resource path="res://art/Sprites/Attack/AttackHero_1_E.png" type="Texture" id=15]
 [ext_resource path="res://art/Sprites/Attack/AttackHero_1_NE.png" type="Texture" id=16]
 [ext_resource path="res://art/Sprites/Attack/AttackHero_1_NW.png" type="Texture" id=17]
+[ext_resource path="res://Panels/quest/Quests.tscn" type="PackedScene" id=18]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=143]
 flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=144]
 flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 240, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=145]
 flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 480, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=146]
 flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 0, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=147]
 flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 240, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=148]
 flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 480, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=149]
 flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 0, 480, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=150]
 flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 240, 480, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 17 )
 region = Rect2( 0, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 17 )
 region = Rect2( 240, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 480, 0, 240, 240 )
+atlas = ExtResource( 17 )
+region = Rect2( 0, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 240, 240, 240 )
+atlas = ExtResource( 17 )
+region = Rect2( 240, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 240, 240, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=14]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 480, 240, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=15]
-flags = 4
-atlas = ExtResource( 2 )
+atlas = ExtResource( 17 )
 region = Rect2( 0, 480, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=167]
 flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 240, 480, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=17]
-flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=168]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 1 )
 region = Rect2( 240, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=169]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 1 )
 region = Rect2( 480, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=170]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 1 )
 region = Rect2( 0, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=171]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 1 )
 region = Rect2( 240, 240, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=172]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 480, 240, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=173]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 480, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=174]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 240, 480, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 480, 240, 240, 240 )
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 0, 480, 240, 240 )
+atlas = ExtResource( 11 )
+region = Rect2( 240, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=24]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 240, 480, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=25]
-flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 0, 0, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=26]
-flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 240, 0, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=27]
-flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 0, 240, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=28]
-flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 240, 240, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=29]
-flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 0, 480, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=30]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 0, 0, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=31]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 240, 0, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 480, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=33]
+[sub_resource type="AtlasTexture" id=25]
 flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 0, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=34]
+[sub_resource type="AtlasTexture" id=26]
 flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 240, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=35]
+[sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 480, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=36]
+[sub_resource type="AtlasTexture" id=28]
 flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 0, 480, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=37]
+[sub_resource type="AtlasTexture" id=29]
 flags = 4
 atlas = ExtResource( 11 )
+region = Rect2( 240, 480, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=183]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=184]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 240, 0, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=185]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 480, 0, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=186]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 240, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=187]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 240, 240, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=188]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 480, 240, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=189]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 480, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=190]
+flags = 4
+atlas = ExtResource( 9 )
 region = Rect2( 240, 480, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=38]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 0, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=39]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 240, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=40]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 480, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=41]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 0, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=42]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 240, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=43]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 480, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=44]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 0, 480, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=45]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 240, 480, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=46]
+[sub_resource type="AtlasTexture" id=151]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=47]
+[sub_resource type="AtlasTexture" id=152]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 3 )
 region = Rect2( 240, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=48]
+[sub_resource type="AtlasTexture" id=153]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 3 )
 region = Rect2( 480, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=49]
+[sub_resource type="AtlasTexture" id=154]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 3 )
 region = Rect2( 0, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=50]
+[sub_resource type="AtlasTexture" id=155]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 3 )
 region = Rect2( 240, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=51]
+[sub_resource type="AtlasTexture" id=156]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 3 )
 region = Rect2( 480, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=52]
+[sub_resource type="AtlasTexture" id=157]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 3 )
 region = Rect2( 0, 480, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=53]
+[sub_resource type="AtlasTexture" id=158]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 3 )
 region = Rect2( 240, 480, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=54]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 7 )
 region = Rect2( 0, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=55]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 7 )
 region = Rect2( 240, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=56]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 7 )
 region = Rect2( 480, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=57]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 7 )
 region = Rect2( 0, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=58]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 7 )
 region = Rect2( 240, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=59]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 7 )
 region = Rect2( 480, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=60]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 7 )
 region = Rect2( 0, 480, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=61]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 7 )
 region = Rect2( 240, 480, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=62]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 12 )
 region = Rect2( 0, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=63]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 12 )
 region = Rect2( 240, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=64]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 12 )
 region = Rect2( 480, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=65]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 12 )
 region = Rect2( 0, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=66]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 12 )
 region = Rect2( 240, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=67]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 12 )
 region = Rect2( 480, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=68]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 12 )
 region = Rect2( 0, 480, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=69]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 12 )
 region = Rect2( 240, 480, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=70]
+[sub_resource type="AtlasTexture" id=197]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 14 )
 region = Rect2( 0, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=71]
+[sub_resource type="AtlasTexture" id=198]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 14 )
 region = Rect2( 240, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=72]
+[sub_resource type="AtlasTexture" id=199]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 14 )
+region = Rect2( 0, 240, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=200]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 240, 240, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=201]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 0, 480, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=202]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 240, 480, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=175]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=176]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 240, 0, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=177]
+flags = 4
+atlas = ExtResource( 6 )
 region = Rect2( 480, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=73]
+[sub_resource type="AtlasTexture" id=178]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 6 )
 region = Rect2( 0, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=74]
+[sub_resource type="AtlasTexture" id=179]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 6 )
 region = Rect2( 240, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=75]
+[sub_resource type="AtlasTexture" id=180]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 6 )
 region = Rect2( 480, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=76]
+[sub_resource type="AtlasTexture" id=181]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 6 )
 region = Rect2( 0, 480, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=77]
+[sub_resource type="AtlasTexture" id=182]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 6 )
 region = Rect2( 240, 480, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=78]
-flags = 4
-atlas = ExtResource( 14 )
-region = Rect2( 0, 0, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=79]
-flags = 4
-atlas = ExtResource( 14 )
-region = Rect2( 240, 0, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=80]
-flags = 4
-atlas = ExtResource( 14 )
-region = Rect2( 0, 240, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=81]
-flags = 4
-atlas = ExtResource( 14 )
-region = Rect2( 240, 240, 240, 240 )
-
-[sub_resource type="AtlasTexture" id=82]
-flags = 4
-atlas = ExtResource( 14 )
-region = Rect2( 0, 480, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=83]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 10 )
 region = Rect2( 0, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=84]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 10 )
 region = Rect2( 240, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=85]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 10 )
 region = Rect2( 480, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=86]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 10 )
 region = Rect2( 0, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=87]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 10 )
 region = Rect2( 240, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=88]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 10 )
 region = Rect2( 480, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=89]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 10 )
 region = Rect2( 0, 480, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=90]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 10 )
 region = Rect2( 240, 480, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=91]
+[sub_resource type="AtlasTexture" id=159]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=92]
+[sub_resource type="AtlasTexture" id=160]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 240, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=93]
+[sub_resource type="AtlasTexture" id=161]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 480, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=94]
+[sub_resource type="AtlasTexture" id=162]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 0, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=95]
+[sub_resource type="AtlasTexture" id=163]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 240, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=96]
+[sub_resource type="AtlasTexture" id=164]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 480, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=97]
+[sub_resource type="AtlasTexture" id=165]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 0, 480, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=98]
+[sub_resource type="AtlasTexture" id=166]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 2 )
 region = Rect2( 240, 480, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=99]
+[sub_resource type="AtlasTexture" id=191]
 flags = 4
 atlas = ExtResource( 15 )
 region = Rect2( 0, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=100]
+[sub_resource type="AtlasTexture" id=192]
 flags = 4
 atlas = ExtResource( 15 )
 region = Rect2( 240, 0, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=101]
+[sub_resource type="AtlasTexture" id=193]
 flags = 4
 atlas = ExtResource( 15 )
 region = Rect2( 0, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=102]
+[sub_resource type="AtlasTexture" id=194]
 flags = 4
 atlas = ExtResource( 15 )
 region = Rect2( 240, 240, 240, 240 )
 
-[sub_resource type="AtlasTexture" id=103]
+[sub_resource type="AtlasTexture" id=195]
 flags = 4
 atlas = ExtResource( 15 )
 region = Rect2( 0, 480, 240, 240 )
+
+[sub_resource type="AtlasTexture" id=196]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 240, 480, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=104]
 flags = 4
-atlas = ExtResource( 17 )
+atlas = ExtResource( 16 )
 region = Rect2( 0, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=105]
 flags = 4
-atlas = ExtResource( 17 )
+atlas = ExtResource( 16 )
 region = Rect2( 240, 0, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=106]
 flags = 4
-atlas = ExtResource( 17 )
+atlas = ExtResource( 16 )
 region = Rect2( 0, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=107]
 flags = 4
-atlas = ExtResource( 17 )
+atlas = ExtResource( 16 )
 region = Rect2( 240, 240, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=108]
 flags = 4
-atlas = ExtResource( 17 )
+atlas = ExtResource( 16 )
 region = Rect2( 0, 480, 240, 240 )
 
 [sub_resource type="AtlasTexture" id=109]
@@ -600,79 +611,79 @@ region = Rect2( 240, 480, 240, 240 )
 
 [sub_resource type="SpriteFrames" id=117]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"frames": [ SubResource( 143 ), SubResource( 144 ), SubResource( 145 ), SubResource( 146 ), SubResource( 147 ), SubResource( 148 ), SubResource( 149 ), SubResource( 150 ) ],
 "loop": true,
 "name": "W",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
-"name": "SW",
-"speed": 8.0
-}, {
-"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
-"loop": true,
-"name": "E",
-"speed": 8.0
-}, {
-"frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
-"loop": true,
-"name": "Attack_NE",
+"name": "Attack_NW",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ) ],
-"loop": true,
-"name": "Idle_N",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
-"loop": true,
-"name": "NE",
-"speed": 8.0
-}, {
-"frames": [ SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ) ],
-"loop": true,
-"name": "N",
-"speed": 8.0
-}, {
-"frames": [ SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ) ],
-"loop": true,
-"name": "Idle_N2",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ],
-"loop": true,
-"name": "Idle2",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ) ],
+"frames": [ SubResource( 167 ), SubResource( 168 ), SubResource( 169 ), SubResource( 170 ), SubResource( 171 ), SubResource( 172 ), SubResource( 173 ), SubResource( 174 ) ],
 "loop": true,
 "name": "SE",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ) ],
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
+"loop": true,
+"name": "Idle_N",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 183 ), SubResource( 184 ), SubResource( 185 ), SubResource( 186 ), SubResource( 187 ), SubResource( 188 ), SubResource( 189 ), SubResource( 190 ) ],
+"loop": true,
+"name": "NE",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
+"loop": true,
+"name": "Idle2",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 151 ), SubResource( 152 ), SubResource( 153 ), SubResource( 154 ), SubResource( 155 ), SubResource( 156 ), SubResource( 157 ), SubResource( 158 ) ],
+"loop": true,
+"name": "E",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ) ],
+"loop": true,
+"name": "N",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ],
+"loop": true,
+"name": "Idle_N2",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 197 ), SubResource( 198 ), SubResource( 199 ), SubResource( 200 ), SubResource( 201 ), SubResource( 202 ) ],
 "loop": true,
 "name": "Attack_SW",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ) ],
+"frames": [ SubResource( 175 ), SubResource( 176 ), SubResource( 177 ), SubResource( 178 ), SubResource( 179 ), SubResource( 180 ), SubResource( 181 ), SubResource( 182 ) ],
 "loop": true,
 "name": "NW",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ) ],
+"frames": [ SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ) ],
 "loop": true,
 "name": "S",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 99 ), SubResource( 100 ), SubResource( 101 ), SubResource( 102 ), SubResource( 103 ) ],
+"frames": [ SubResource( 159 ), SubResource( 160 ), SubResource( 161 ), SubResource( 162 ), SubResource( 163 ), SubResource( 164 ), SubResource( 165 ), SubResource( 166 ) ],
+"loop": true,
+"name": "SW",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 191 ), SubResource( 192 ), SubResource( 193 ), SubResource( 194 ), SubResource( 195 ), SubResource( 196 ) ],
 "loop": true,
 "name": "Attack_SE",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 104 ), SubResource( 105 ), SubResource( 106 ), SubResource( 107 ), SubResource( 108 ) ],
 "loop": true,
-"name": "Attack_NW",
+"name": "Attack_NE",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 109 ), SubResource( 110 ), SubResource( 111 ), SubResource( 112 ), SubResource( 113 ), SubResource( 114 ), SubResource( 115 ), SubResource( 116 ) ],
@@ -683,7 +694,7 @@ animations = [ {
 
 [sub_resource type="Animation" id=118]
 resource_name = "Attack_E"
-length = 0.5
+length = 0.6
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
@@ -704,10 +715,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.20128, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4 ]
+"values": [ 0, 1, 3, 3, 4, 5 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("MelleRange/CollisionShape2D:disabled")
@@ -716,15 +727,16 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ true, true, true, false, false ]
+"values": [ true, true, true, true, false, false ]
 }
 
 [sub_resource type="Animation" id=119]
 resource_name = "Attack_N"
 length = 0.5
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -763,7 +775,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=120]
-length = 0.5
+length = 0.6
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
@@ -784,10 +796,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4 ]
+"values": [ 0, 1, 2, 2, 3, 4 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("MelleRange/CollisionShape2D:disabled")
@@ -796,14 +808,14 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.589418 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ true, true, true, false, false ]
+"values": [ true, true, true, true, false, false, true ]
 }
 
 [sub_resource type="Animation" id=121]
-length = 0.5
+length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -823,10 +835,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4 ]
+"values": [ 0, 1, 2, 2, 3, 4 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("MelleRange/CollisionShape2D:disabled")
@@ -835,10 +847,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.591342 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ true, true, true, false, false ]
+"values": [ true, true, true, true, false, false, true ]
 }
 
 [sub_resource type="Animation" id=122]
@@ -963,7 +975,8 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=125]
 resource_name = "Attack_W"
-length = 0.5
+length = 0.6
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -983,10 +996,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4 ]
+"values": [ 0, 1, 3, 3, 4, 5 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("MelleRange/CollisionShape2D:disabled")
@@ -995,10 +1008,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ true, true, true, false, false ]
+"values": [ true, true, true, true, false, false ]
 }
 
 [sub_resource type="Animation" id=126]
@@ -1442,24 +1455,27 @@ tracks/1/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=142]
-radius = 64.2133
+radius = 36.1491
 
-[node name="Player" type="KinematicBody2D"]
-position = Vector2( 0.122787, 6.91133 )
+[node name="Player" type="KinematicBody2D" groups=[
+"Player",
+]]
+light_mask = 3
+position = Vector2( 690.992, 381.939 )
 script = ExtResource( 4 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( 0, 38.1407 )
 scale = Vector2( 5.66247, 2.7507 )
-polygon = PoolVector2Array( 2.59733, -4.45881, 4.00059, -1.18494, 3.06508, 4.5925, -2.3609, 4.39992, -4.41903, -0.607193, -2.82866, -4.65138, 0.164986, -5.61429 )
+polygon = PoolVector2Array( 2.81707, -2.03508, 3.07869, 0.302216, 1.66264, 1.35585, -2.07965, 1.53781, -3.49972, -0.333984, -2.40378, -2.52635, 0.562119, -2.8788 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 modulate = Color( 0.960784, 0.960784, 0.960784, 1 )
 position = Vector2( 0.0606689, -3.28195 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 117 )
-animation = "Idle"
-frame = 5
+animation = "Attack_NE"
+frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Attack_E = SubResource( 118 )
@@ -1496,16 +1512,27 @@ position = Vector2( 35, 0 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -10.8243, 28.6383 )
 current = true
+zoom = Vector2( 0.85, 0.9 )
 smoothing_enabled = true
+smoothing_speed = 4.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="Quest" parent="Camera2D/CanvasLayer" instance=ExtResource( 18 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 25.5818
+margin_top = 30.9954
+margin_right = 312.586
+margin_bottom = 167.996
 
 [node name="MelleRange" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MelleRange"]
-position = Vector2( 0, -6.34048 )
+position = Vector2( -0.315689, -0.348755 )
 scale = Vector2( 1, 0.6 )
 shape = SubResource( 142 )
+disabled = true
 [connection signal="input_event" from="." to="." method="_on_Player_input_event"]
 [connection signal="tree_entered" from="." to="." method="_on_Player_tree_entered"]
 [connection signal="body_entered" from="MelleRange" to="." method="_on_MelleRange_body_entered"]

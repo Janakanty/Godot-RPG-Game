@@ -1,5 +1,11 @@
 extends KinematicBody2D
 
+#
+#QUESTS
+#
+
+var hp = 400
+var current_hp
 export var speed = 0  # How fast the player will move (pixels/sec).
 var max_speed = 140
 var acceleration = 1299
@@ -15,11 +21,15 @@ var can_fire = true
 var shooting = false
 var melee = false
 var damage
-var rate_of_fire = 0.55     
+var rate_of_fire = 0.6
+   
 
 var anim_direction = "S"
 var anim_mode = "Idle_S"
 	
+func _ready():
+	current_hp = hp
+	print(current_hp)
 
 func _unhandled_input(event):
 	if event.is_action_pressed("Click"):
@@ -123,8 +133,12 @@ func AnimationLoop():  #function for setting the appropriate animation of the pl
 		
 func stop_player():
 	moving = false
+	
+func OnHit(damage):
+	current_hp -= damage
+	print(current_hp)
 
 func _on_MelleRange_body_entered(body):
-	if body.is_in_group("Enemies"):
+	if body.is_in_group("Enemies") : 
 		if((get_angle_to(body.position)/3.14)*180) <= (fire_direction +25) and ((get_angle_to(body.position)/3.14)*180) >= (fire_direction - 25):
 				body.OnHit(damage)

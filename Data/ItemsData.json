@@ -1,0 +1,12 @@
+{
+  "Miecz": {
+    "ItemAttack": 1,
+    "ItemDefence": 0,
+    "Description ": "zwykły pręt"
+  },
+  "Ubranie": {
+    "ItemAttack": 0,
+    "ItemDefence": 1,
+    "Description ": "zwykłe ubranie"
+  }
+}

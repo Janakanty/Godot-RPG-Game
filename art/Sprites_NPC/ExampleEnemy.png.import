@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ExampleEnemy.png-994ee22c148c05b811ef9067569e20a0.stex"
+path="res://.import/ExampleEnemy.png-8eda055b1b29fb4a59bb8b7cc4c940d7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Sprites_NPC/ExampleEnemy.png"
-dest_files=[ "res://.import/ExampleEnemy.png-994ee22c148c05b811ef9067569e20a0.stex" ]
+source_file="res://art/Sprites_NPC/ExampleEnemy.png"
+dest_files=[ "res://.import/ExampleEnemy.png-8eda055b1b29fb4a59bb8b7cc4c940d7.stex" ]
 
 [params]
 
