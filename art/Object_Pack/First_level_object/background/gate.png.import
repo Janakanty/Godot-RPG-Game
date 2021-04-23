@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sciana przod.png-159cfda882fd6de4bc7034eb261a1fe9.stex"
+path="res://.import/gate.png-1a859070ec7586ac7b035b7de48358cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sciana przod.png"
-dest_files=[ "res://.import/sciana przod.png-159cfda882fd6de4bc7034eb261a1fe9.stex" ]
+source_file="res://art/Object_Pack/First_level_object/background/gate.png"
+dest_files=[ "res://.import/gate.png-1a859070ec7586ac7b035b7de48358cb.stex" ]
 
 [params]
 

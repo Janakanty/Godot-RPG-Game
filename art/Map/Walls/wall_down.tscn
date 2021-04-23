@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://art/Object_Pack/Wall/sciana front.png" type="Texture" id=1]
+[ext_resource path="res://art/Map/Walls/wall.gd" type="Script" id=2]
+
+[node name="Wall-lv1-01" type="StaticBody2D"]
+script = ExtResource( 2 )
+
+[node name="sciana" type="Sprite" parent="."]
+position = Vector2( -75.2378, -1065.46 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, 11.3934 )
+scale = Vector2( 1, 0.484796 )
+polygon = PoolVector2Array( -192.501, 42.0548, -191.794, 90.138, 45.794, 88.0167, 46.5011, 37.8121 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2( 1.49832, 0 )
+polygon = PoolVector2Array( -193.999, 41.3477, 43.5885, 38.5192, 40.7601, -174.32, -195.414, -170.077 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

@@ -5,18 +5,42 @@ export (Color,RGB) var mouse_over
 
 var dialog_is = false
 var current_dialogue = ['']
+var entered = false
 var dialog1=false
 var dialog2=false
 
 var Fiona_start =[
-	{'text':'...pamętam, że nie mogłem otworzyć tego słoika. Ale ile miałem lat? Chyba byłem mały'},
-	{'text':'Był on przezroczysty i bardzo chciałem go otworzyć. Szczerze? Nie za bardzo jestem pewny czy tak wygladał słoik ale...'},
+	{
+		'background': "res://art/Sprites_NPC/portrairFIONA.png"
+	},
+	{'text':'...O'},
+	{
+		'background': "res://art/Sprites/portrait.png"
+	},
+	{'text':'...?'},
+	{
+		'background': "res://art/Sprites_NPC/portrairFIONA.png"
+	},
+	{'text':'A nie byłeś przypadkiem martwy?'},
+	{'text':'Cóż, nie szkodzi, na początku wszyscy są martwi, więc nie musisz si przejmować, ja jestem Fiona a ty?'},
+	{
+		'background': "res://art/Sprites/portrait.png"
+	},
+	{'text':'...'},
+	{
+		'background': "res://art/Sprites_NPC/portrairFIONA.png"
+	},
+	{'name':'Fiona','text':'A no tak! Zapomniałam, nic nie pamitasz. Daj mi dać sobie radę i idź czym prędzej do jamy.'},
+	{'name':'Fiona','text':'Tam na pewno sobie przypomnisz jak odpowiadać na pytania. Potem tu wróć to pogadamy'},
+	
 ]
 
 var Fiona_end =[
-	{'name':'[name]','text':'co mówiłeś? Ał moja głowa! '},
-	{'text':'Na co tu jeszcze czekasz? Idź dalej to się dowiesz gdzie jesteś'},
-	{'text':'No idź nie czekaj tu w nieskończoność bo się przyzwyczaisz'},
+	{
+		'background': "res://art/Sprites_NPC/portrairFIONA.png"
+	},
+	{'name':'Fiona','text':'Co mówiłeś?'},
+	{'name':'Fiona','text':'Nie rozumiem cię! Idź do jamy. Jak wrócisz to porozmawiamy'},
 ]
 
 func _on_Area2D_mouse_entered(): #Zmienia kolor postaci po najechaniu myszką 
@@ -31,6 +55,7 @@ func what_dialogue_should_be(): #system wyboru, który dialog powinien teraz si�
 	if dialog1==false:
 		current_dialogue=Fiona_start
 		dialog1=true
+		entered=true
 	elif dialog2==false:
 		current_dialogue=Fiona_end
 		
@@ -45,3 +70,15 @@ func _on_Area2D_input_event(viewport, event, shape_idx):  #wywołanie dialogu po
 		
 		
 	pass # Replace with function body.
+
+
+func _on_Area2D2_body_entered(body):
+	if body.name=="Player" and entered==false:
+		what_dialogue_should_be()
+		var dialog = preload("res://addons/dialogs/Dialog.tscn").instance()
+		var camera = get_node("../Player/Camera2D/CanvasLayer")
+		dialog.dialog_script=current_dialogue
+		camera.add_child(dialog)
+		entered = true
+		
+

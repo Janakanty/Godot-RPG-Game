@@ -118,38 +118,38 @@ region = Rect2( 0, 0, 300, 300 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 300, 300 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 300, 0, 300, 300 )
+region = Rect2( 0, 0, 300, 300 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 300, 300, 300 )
+region = Rect2( 300, 0, 300, 300 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 300, 300, 300, 300 )
+region = Rect2( 0, 300, 300, 300 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 600, 300, 300 )
+region = Rect2( 300, 300, 300, 300 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 300, 600, 300, 300 )
+region = Rect2( 0, 600, 300, 300 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 300, 300 )
+atlas = ExtResource( 1 )
+region = Rect2( 300, 600, 300, 300 )
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
@@ -158,14 +158,14 @@ animations = [ {
 "name": "knife",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
-"loop": true,
-"name": "mage_cry",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 9 ) ],
+"frames": [ SubResource( 3 ) ],
 "loop": true,
 "name": "mage",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "mage_cry",
 "speed": 5.0
 } ]
 
@@ -190,12 +190,12 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 955.069, 229.144 )
 scale = Vector2( 1.05901, 1.04433 )
 z_index = 1
 frames = SubResource( 10 )
-animation = "mage_cry"
-frame = 3
+animation = "mage"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -31.0
@@ -216,6 +216,7 @@ process_material = SubResource( 12 )
 texture = ExtResource( 2 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
 margin_left = 185.0
 margin_top = 488.0
 margin_right = 1298.0

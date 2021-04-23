@@ -1,15 +1,13 @@
 extends KinematicBody2D
 
-#
-#QUESTS
-#
 
+var atak = 0 
 var hp = 400
 var current_hp
 export var speed = 0  # How fast the player will move (pixels/sec).
-var max_speed = 140
+var max_speed = 120
 var acceleration = 1299
-var move_direction 
+var move_direction = 1 
 var fire_direction = 0
 var moving = false
 var destination = Vector2()
@@ -100,6 +98,8 @@ func AnimationLoop():  #function for setting the appropriate animation of the pl
 			anim_direction = "NW"
 		elif fire_direction <= -165 or fire_direction >= 165:
 			anim_direction = "W"
+		atak=atak+1
+		print(atak)
 			
 	else:
 		if shooting == false:
@@ -137,6 +137,10 @@ func stop_player():
 func OnHit(damage):
 	current_hp -= damage
 	print(current_hp)
+	
+func low_speed():
+	speed = 30
+	
 
 func _on_MelleRange_body_entered(body):
 	if body.is_in_group("Enemies") : 
