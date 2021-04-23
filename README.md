@@ -20,4 +20,4 @@ Niektóre założenia:
 
 ![gif2](https://user-images.githubusercontent.com/62144769/115885549-5aa47b80-a450-11eb-9d5e-97e59a319e5e.gif)
 
-![giphy](https://user-images.githubusercontent.com/62144769/102811071-18493000-43c5-11eb-80af-74d3a9b75bc2.gif)
+![gif3](https://user-images.githubusercontent.com/62144769/115886676-765c5180-a451-11eb-992e-748a0e601fa6.gif)
