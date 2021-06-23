@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 onready var player = get_parent().get_node("Player")
 onready var map_navigation = get_parent().get_parent().get_node("Navigation2D") 
-onready var Quest = get_node("/root/Map/YSort/Player/Camera2D/CanvasLayer/Quest")
+#onready var Quest = get_node("/root/Map/YSort/Player/Camera2D/CanvasLayer/Quest")
 
 var speed = 30
 var max_hp = 400
@@ -103,7 +103,6 @@ func SightCheck():
 					state = "Rest"
 
 func OnHit(damage):
-	print(current_hp)
 	current_hp = current_hp - int(damage)
 	if current_hp<1:
 		die()
@@ -115,23 +114,16 @@ func OnHit(damage):
 
 func die():
 	queue_free();
-	Quest.kill1_end()
-	
 	
 
-	
 func _on_MelleRange_body_entered(body):
 	if body.is_in_group("Player") : 
 		body.OnHit(30)
 		
 		
-
 func _on_Sight_body_entered(body):
 	if body == player:
 		player_in_range = true
-		if Quest.zad_1 == false:
-			Quest.kill1()
-			Quest.zad_1 = true
 	
 
 func _on_Sight_body_exited(body):

@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://art/Object_Pack/First_level_object/background/rocklight.png" type="Texture" id=1]
+[ext_resource path="res://art/Shaders/light.png" type="Texture" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -46,10 +47,16 @@ scale = Vector2( 0.5, 0.5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0.294312, 81.9185 )
 frames = SubResource( 7 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( -5.39148, 0 )
 scale = Vector2( 0.952667, 1 )
 polygon = PoolVector2Array( 52.9013, 72.4887, 23.2028, 77.4384, -31.2444, 75.3171, -59.5287, 63.2963, -64.5419, 46.7289, -54.5789, 34.3049, -36.9013, 30.7694, 33.1023, 35.7191, 54.3155, 42.7902 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 2 )
+texture_scale = 1.94
+color = Color( 0.701961, 0.654902, 0.133333, 1 )
+energy = 1.4

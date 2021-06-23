@@ -13,10 +13,10 @@ var Covon_start = [
 		'background': "res://art/Sprites_NPC/portraitCOVON.png"
 	},
 	
-	{'text': 'No no no, kogo my tu mamy! Wreszcie się obudziłeś. Fiona miała mieć na Ciebie oko.'},
-	{'text':'Spróbuj nie broić. Nasza siedziba znajduje się za tym przejściem, ale Bob Cie nie wpuści'},
-	{'text':'Pierw musisz wejść do groty. Takie mamy tu zasady. Bez imienia Cię nie wpuścimy'},
-	{'text':'zrozumiałeś?'},	
+	{'text':'No no no, kogo my tu mamy! Wreszcie się obudziłeś. Pewnie poznałeś już Fionę i Ci powiedziała co i jak?'},
+	{'text':'Nasza siedziba znajduje się za tym przejściem do góry, ale Bob Cie nie wpuści.'},
+	{'text':'Pierw musisz wejść do groty. Takie mamy tu zasady. Bez imienia Cię nie wpuścimy.'},
+	{'text':'Zrozumiałeś?'},	
 	{
 		'background': "res://art/Sprites/portrait.png"
 	},
@@ -47,7 +47,7 @@ var Covon_click3 =[
 	{
 		'background': "res://art/Sprites_NPC/portraitCOVON.png"
 	},
-	{'name':'Covon','text':'Sluchaj, ja nie jestem tu od przypominania Ci kim jesteś. Idź do Samiry ona podpowie Ci jak odzyskać pamięć.'},
+	{'name':'Covon','text':'Słuchaj, ja nie jestem tu od przypominania Ci kim jesteś. Idź do Samiry ona podpowie Ci jak odzyskać pamięć.'},
 	{'name':'Covon','text':'Ja nazywam się Covon. Ale bez przesady, swoje imie powinieneś pamiętać. Czyż nie?'},
 	{
 	'input': 'Jak masz na imię?',
@@ -63,7 +63,7 @@ var Covon_click3 =[
 	
 	
 ]
-
+	
 
 func _on_Area2D_mouse_entered(): #Zmienia kolor postaci po najechaniu myszką 
 	set_modulate(mouse_over)
@@ -89,7 +89,5 @@ func _on_Area2D_input_event(viewport, event, shape_idx):  #wywołanie dialogu po
 		dialog.dialog_script=current_dialogue
 		camera.add_child(dialog)
 			
-			
-		
-		
 	pass # Replace with function body.
+

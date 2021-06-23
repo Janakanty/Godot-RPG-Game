@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bup1.wav-39aa25d6af7c1e73f1af5cba2d119961.sample"
+
+[deps]
+
+source_file="res://Sounds/bup1.wav"
+dest_files=[ "res://.import/bup1.wav-39aa25d6af7c1e73f1af5cba2d119961.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

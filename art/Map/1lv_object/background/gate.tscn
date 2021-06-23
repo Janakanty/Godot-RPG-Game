@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://art/Object_Pack/First_level_object/background/gate.png" type="Texture" id=1]
 [ext_resource path="res://art/Map/1lv_object/background/gate.gd" type="Script" id=2]
+[ext_resource path="res://art/Shaders/light.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -43,6 +44,15 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2( 7.07111, -126.357 )
 shape = SubResource( 3 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 10.3181, -26.1921 )
+scale = Vector2( 0.522703, 0.873537 )
+texture = ExtResource( 3 )
+texture_scale = 0.38
+mode = 1
+shadow_enabled = true
+shadow_color = Color( 0.937255, 0.388235, 0.388235, 0.509804 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
 [connection signal="input_event" from="Area2D2" to="." method="_on_Area2D2_input_event"]

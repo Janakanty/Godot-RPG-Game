@@ -1,7 +1,17 @@
 {
 "NoWeapon": {
  "SkillName":"NoWeapon",
- "SkillType":"MeleeAttack",
+ "SkillType":"MeleeAttack1",
+ "SkillDamage":"50",
+ "SkillProjectileSpeed":"N/A",
+ "SkillDamageDelayTime":"N/A",
+ "SkillRemoveDelayTime":"N/A",
+ "SkillExpansionTime":"N/A",
+ "SkillHeal":"N/A"
+},
+"BasicWeapon": {
+ "SkillName":"BasicWeapon",
+ "SkillType":"MeleeAttack2",
  "SkillDamage":"100",
  "SkillProjectileSpeed":"N/A",
  "SkillDamageDelayTime":"N/A",

@@ -22,7 +22,7 @@ var Fiona_start =[
 		'background': "res://art/Sprites_NPC/portrairFIONA.png"
 	},
 	{'text':'A nie byłeś przypadkiem martwy?'},
-	{'text':'Cóż, nie szkodzi, na początku wszyscy są martwi, więc nie musisz si przejmować, ja jestem Fiona a ty?'},
+	{'text':'Cóż, nie szkodzi, na początku wszyscy są martwi, więc nie musisz się przejmować, ja jestem Fiona, a ty?'},
 	{
 		'background': "res://art/Sprites/portrait.png"
 	},
@@ -30,7 +30,7 @@ var Fiona_start =[
 	{
 		'background': "res://art/Sprites_NPC/portrairFIONA.png"
 	},
-	{'name':'Fiona','text':'A no tak! Zapomniałam, nic nie pamitasz. Daj mi dać sobie radę i idź czym prędzej do jamy.'},
+	{'name':'Fiona','text':'A no tak! Zapomniałam, nic nie pamiętasz. Daj mi dać sobie radę i idź czym prędzej do groty.'},
 	{'name':'Fiona','text':'Tam na pewno sobie przypomnisz jak odpowiadać na pytania. Potem tu wróć to pogadamy'},
 	
 ]
@@ -40,7 +40,7 @@ var Fiona_end =[
 		'background': "res://art/Sprites_NPC/portrairFIONA.png"
 	},
 	{'name':'Fiona','text':'Co mówiłeś?'},
-	{'name':'Fiona','text':'Nie rozumiem cię! Idź do jamy. Jak wrócisz to porozmawiamy'},
+	{'name':'Fiona','text':'Nie rozumiem cię! Idź do groty. Jak wrócisz to porozmawiamy'},
 ]
 
 func _on_Area2D_mouse_entered(): #Zmienia kolor postaci po najechaniu myszką 
@@ -67,11 +67,6 @@ func _on_Area2D_input_event(viewport, event, shape_idx):  #wywołanie dialogu po
 		dialog.dialog_script=current_dialogue
 		camera.add_child(dialog)
 		
-		
-		
-	pass # Replace with function body.
-
-
 func _on_Area2D2_body_entered(body):
 	if body.name=="Player" and entered==false:
 		what_dialogue_should_be()

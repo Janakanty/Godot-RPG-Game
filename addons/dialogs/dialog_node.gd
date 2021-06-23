@@ -1,5 +1,7 @@
 extends Control
 
+var rng = RandomNumberGenerator.new()
+
 var input_next = 'ui_accept'
 var dialog_index = 0
 var finished = false
@@ -149,6 +151,7 @@ func update_text(text):
 	return true
 
 func load_dialog(skip_add = false):
+	Save1.auxiliary_dialog = true
 	var stop_player = get_node("/root/Map/YSort/Player") # zatrzymuje postac po uruchomieniu dialogu
 	stop_player.stop_player()
 	# This will load the next entry in the dialog_script array.
@@ -156,6 +159,7 @@ func load_dialog(skip_add = false):
 		event_handler(dialog_script[dialog_index])
 	else:
 		queue_free()
+		Save1.auxiliary_dialog = false
 	if skip_add == false:
 		dialog_index += 1
 
@@ -263,3 +267,14 @@ func _on_Tween_tween_completed(object, key):
 
 func _on_TextInputDialog_confirmed():
 	pass # Replace with function body.
+
+func sound_talk():
+	randomize()
+	var my_random_number = randi()%3
+	if my_random_number == 0:
+		$AudioStreamPlayer.play()
+	if my_random_number == 1:
+		$AudioStreamPlayer2.play()
+	if my_random_number == 2:
+		$AudioStreamPlayer3.play()
+

@@ -30,7 +30,7 @@ var Bob_click3 =[
 	{
 		'background': "res://art/Sprites_NPC/portraitBOB.png"
 	},
-	{'text': 'Im szybciej to zrobisz tym szybciej ja wróce do moich zajęć'},
+	{'text': 'Im szybciej to zrobisz tym szybciej ja wrócę do moich zajęć'},
 	
 ]
 

@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://art/Object_Pack/First_level_object/background/desc.png" type="Texture" id=1]
+[ext_resource path="res://art/Map/1lv_object/background/desc.gd" type="Script" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
+} ]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2( -0.37458, 2.24747 )
+scale = Vector2( 0.7, 0.7 )
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2( 6.42133, 287.889 )
+polygon = PoolVector2Array( -190.752, -55.0592, -66.479, 93.2661, -95.3423, 113.31, -212.399, -44.6364 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2( 117.061, 220.269 )
+polygon = PoolVector2Array( -190.752, -55.0592, -63.272, 76.4292, -87.3247, 85.2485, -212.399, -44.6364 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -80.4039, 265.301 )
+frames = SubResource( 1 )
+playing = true
+
+[node name="Towhite" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Towhite"]
+position = Vector2( 6.4141, 285.426 )
+polygon = PoolVector2Array( -101.756, -107.174, -185.139, -52.654, -159.483, -24.5924, -68.8843, -75.905 )
+
+[node name="Toblack" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Toblack"]
+position = Vector2( 7.21584, 287.029 )
+polygon = PoolVector2Array( -92.937, 59.5922, -3.94181, -11.7643, 28.9303, 21.1078, -68.0825, 93.2661 )
+[connection signal="body_entered" from="Towhite" to="." method="_on_Towhite_body_entered"]
+[connection signal="body_entered" from="Toblack" to="." method="_on_Toblack_body_entered"]

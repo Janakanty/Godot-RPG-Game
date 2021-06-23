@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/Map/Walls/wall.tscn" type="PackedScene" id=2]
@@ -38,11 +38,26 @@
 [ext_resource path="res://art/Map/Walls/wall_near_special2.tscn" type="PackedScene" id=36]
 [ext_resource path="res://NPC's/Bob/NPC-Bob.tscn" type="PackedScene" id=37]
 [ext_resource path="res://art/Map/Walls/bar2.tscn" type="PackedScene" id=38]
+[ext_resource path="res://art/Map/1lv_object/background/table2.tscn" type="PackedScene" id=39]
+[ext_resource path="res://art/Map/1lv_object/background/table3.tscn" type="PackedScene" id=40]
+[ext_resource path="res://art/Map/1lv_object/background/fire.tscn" type="PackedScene" id=41]
+[ext_resource path="res://art/Map/1lv_object/background/gratings.tscn" type="PackedScene" id=42]
+[ext_resource path="res://art/Map/1lv_object/background/wood.tscn" type="PackedScene" id=43]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 1075.67, -119.311, 414.191, -447.74, 795.445, -665.19, 1320.25, -506.129, 1535.85, -370.713, 974.778, -776.07, 1650.5, -1184.65, 2000.9, -876.743 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 3, 2, 5, 6, 7 ) ]
 outlines = [ PoolVector2Array( 414.191, -447.74, 1075.67, -119.311, 1535.85, -370.713, 1320.25, -506.129, 2000.9, -876.743, 1650.5, -1184.65, 974.778, -776.07, 795.445, -665.19 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( 1801.22, -1521.62, 1812.24, -1517, 1899.67, -1470.84, 1932.38, -1452.15, 2046.52, -1387.97, 2139.28, -1350.51, 2157.11, -1264.89, 2045.57, -1196.59, 1701.05, -1376.08, 1704.03, -1484.3, 1787.87, -1518.78 )
+
+[sub_resource type="Environment" id=3]
+background_mode = 4
+auto_exposure_enabled = true
+auto_exposure_scale = 0.15
+adjustment_enabled = true
+adjustment_brightness = 0.9
 
 [node name="Map" type="Node2D"]
 __meta__ = {
@@ -53,6 +68,7 @@ __meta__ = {
 mode = 1
 tile_set = ExtResource( 4 )
 cell_size = Vector2( 240, 120 )
+cell_y_sort = true
 format = 1
 tile_data = PoolIntArray( -2883596, 2, 0, -2883593, 0, 0, -2818062, 2, 0, -2818061, 2, 0, -2818060, 2, 0, -2818059, 2, 0, -2818058, 2, 0, -2818057, 2, 0, -2818056, 2, 0, -2818055, 2, 0, -2752525, 2, 0, -2752524, 2, 0, -2752523, 2, 0, -2752522, 2, 0, -2752521, 2, 0, -2752520, 2, 0, -2752519, 2, 0, -2752518, 2, 0, -2686990, 2, 0, -2686989, 2, 0, -2686988, 2, 0, -2686987, 2, 0, -2686986, 2, 0, -2686985, 2, 0, -2686984, 2, 0, -2686983, 2, 0, -2686982, 2, 0, -2686981, 2, 0, -2621454, 2, 0, -2621453, 2, 0, -2621452, 2, 0, -2621451, 2, 0, -2621450, 2, 0, -2621449, 2, 0, -2621448, 2, 0, -2621447, 2, 0, -2621446, 2, 0, -2621445, 2, 0, -2621444, 2, 0, -2555918, 2, 0, -2555917, 2, 0, -2555916, 2, 0, -2555915, 2, 0, -2555914, 4, 0, -2555913, 2, 0, -2555912, 4, 0, -2555911, 2, 0, -2555910, 2, 0, -2555909, 2, 0, -2555908, 2, 0, -2490382, 2, 0, -2490381, 2, 0, -2490380, 2, 0, -2490379, 2, 0, -2490378, 4, 0, -2490377, 4, 0, -2490376, 4, 0, -2490375, 2, 0, -2490374, 2, 0, -2490373, 2, 0, -2490372, 2, 0, -2424847, 2, 0, -2424845, 2, 0, -2424844, 2, 0, -2424843, 2, 0, -2424842, 2, 0, -2424841, 4, 0, -2424840, 4, 0, -2424839, 2, 0, -2424838, 2, 0, -2424837, 2, 0, -2359308, 2, 0, -2359307, 2, 0, -2359306, 2, 0, -2359305, 4, 0, -2359304, 4, 0, -2359303, 2, 0, -2359302, 2, 0, -2293771, 2, 0, -2293770, 2, 0, -2293769, 2, 0, -2293768, 0, 0, -2293767, 5, 0, -2293766, 5, 0, -2228234, 2, 0, -2228233, 0, 0, -2228232, 0, 0, -2228231, 5, 0, -2228230, 5, 0, -2162697, 0, 0, -2162696, 0, 0, -2162695, 5, 0, -2162694, 5, 0, -2097161, 0, 0, -2097160, 0, 0, -2097159, 5, 0, -2097158, 5, 0, -2031625, 0, 0, -2031624, 0, 0, -2031623, 5, 0, -2031622, 5, 0, -1966089, 0, 0, -1966088, 0, 0, -1966087, 5, 0, -1966086, 5, 0, -1703943, 6, 0, -1638407, 5, 0, -1638406, 3, 0, -1638405, 1, 0, -1638404, 6, 0, -1638403, 0, 0, -1572872, 0, 0, -1572871, 0, 0, -1572870, 3, 0, -1572869, 0, 0, -1572868, 7, 0, -1572867, 7, 0, -1507336, 0, 0, -1507335, 0, 0, -1507334, 0, 0, -1507333, 0, 0, -1507332, 4, 0, -1507331, 9, 0, -1441799, 0, 0, -1441798, 0, 0, -1441797, 0, 0, -1441796, 0, 0, -1441795, 0, 0, -1376263, 0, 0, -1376262, 0, 0, -1376261, 1, 0, -1376260, 0, 0, -1376259, 0, 0, -1310727, 0, 0, -1310726, 0, 0, -1310725, 7, 0, -1310724, 7, 0, -1310723, 0, 0, -1245191, 0, 0, -1245190, 0, 0, -1245189, 3, 0, -1245188, 7, 0, -1245187, 7, 0, -1179655, 0, 0, -1179654, 0, 0, -1179653, 7, 0, -1179652, 7, 0, -1179651, 7, 0, -1179650, 7, 0, -1114120, 0, 0, -1114119, 0, 0, -1114118, 0, 0, -1114117, 0, 0, -1114116, 0, 0, -1114115, 0, 0, -1114114, 7, 0, -1114113, 7, 0, -1048584, 0, 0, -1048582, 0, 0, -1048581, 0, 0, -1048580, 0, 0, -1048579, 0, 0, -1048578, 0, 0, -1048577, 7, 0, -1114112, 7, 0, -983044, 9, 0, -983043, 9, 0, -983042, 6, 0, -983041, 2, 0, -1048576, 1, 0, -917508, 9, 0, -917507, 9, 0, -917506, 1, 0, -917505, 6, 0, -983040, 6, 0, -851972, 9, 0, -851971, 9, 0, -851970, 1, 0, -851969, 8, 0, -917504, 1, 0, -786436, 9, 0, -786435, 9, 0, -786434, 4, 0, -786433, 8, 0, -851968, 4, 0, -720900, 8, 0, -720899, 2, 0, -720898, 6, 0, -720897, 4, 0, -786432, 1, 0, -655364, 2, 0, -655363, 2, 0, -655362, 2, 0, -655361, 5, 0, -720896, 1, 0, -589828, 2, 0, -589827, 8, 0, -589826, 1, 0, -589825, 0, 0, -655360, 4, 0, -655359, 1, 0, -655358, 6, 0, -524296, 0, 0, -524295, 0, 0, -524294, 0, 0, -524292, 0, 0, -524291, 0, 0, -524290, 1, 0, -524289, 5, 0, -589824, 6, 0, -589823, 5, 0, -589822, 2, 0, -458760, 0, 0, -458759, 0, 0, -458758, 0, 0, -458757, 0, 0, -458756, 9, 0, -458755, 0, 0, -458754, 8, 0, -458753, 2, 0, -524288, 8, 0, -524287, 8, 0, -524286, 1, 0, -393225, 0, 0, -393224, 0, 0, -393223, 0, 0, -393222, 0, 0, -393221, 0, 0, -393220, 0, 0, -393219, 0, 0, -393218, 2, 0, -393217, 1, 0, -458752, 2, 0, -458751, 1, 0, -458750, 4, 0 )
 
@@ -241,7 +257,7 @@ position = Vector2( 1512.41, -997.462 )
 position = Vector2( 1905.36, -1286.21 )
 
 [node name="Node2D30" parent="YSort" instance=ExtResource( 25 )]
-position = Vector2( 1812.9, -1430.16 )
+position = Vector2( 1811.78, -1430.16 )
 
 [node name="StaticBody2D2" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 1465.69, -376.794 )
@@ -307,7 +323,19 @@ position = Vector2( 2020.87, -1896.24 )
 position = Vector2( 2217.3, -1924.88 )
 
 [node name="StaticBody2D10" parent="YSort" instance=ExtResource( 34 )]
-position = Vector2( 2552.16, -1613.72 )
+position = Vector2( 2449.21, -1535.63 )
+
+[node name="StaticBody2D15" parent="YSort" instance=ExtResource( 43 )]
+position = Vector2( 2211.63, -1368.75 )
+
+[node name="StaticBody2D12" parent="YSort" instance=ExtResource( 40 )]
+position = Vector2( 2402.19, -1445.5 )
+
+[node name="StaticBody2D13" parent="YSort" instance=ExtResource( 41 )]
+position = Vector2( 2080.03, -1498.82 )
+
+[node name="StaticBody2D11" parent="YSort" instance=ExtResource( 39 )]
+position = Vector2( 2467.22, -1590.85 )
 
 [node name="Wall-lv1-23" parent="YSort" instance=ExtResource( 38 )]
 position = Vector2( 3630.58, -2347.92 )
@@ -323,6 +351,9 @@ position = Vector2( 4341.75, -3255.01 )
 
 [node name="Wall-lv1-25" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( 4168.8, -3242.91 )
+
+[node name="StaticBody2D14" parent="YSort" instance=ExtResource( 42 )]
+position = Vector2( 2605.01, -1844.32 )
 
 [node name="Wall-lv1-26" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( 3935.44, -3241.74 )
@@ -355,13 +386,14 @@ tile_data = PoolIntArray( -589821, 12, 0, -589820, 3, 0, -589819, 0, 0, -589818,
 position = Vector2( 2445.65, -1886.17 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 2314.01, -1783.34 )
+position = Vector2( 1116.48, -607.215 )
+z_index = 0
 
 [node name="Fiona" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 1464.29, -984.513 )
 
 [node name="StaticBody2D" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 1413.3, -982.678 )
+position = Vector2( 1411.52, -982.678 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Cursor" parent="YSort" instance=ExtResource( 5 )]
@@ -375,7 +407,7 @@ position = Vector2( 2071.08, -1833.18 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
 visible = false
-position = Vector2( 0.629883, 0 )
+position = Vector2( 10.0687, -1.8877 )
 navpoly = SubResource( 1 )
 
 [node name="blackKai" type="TileMap" parent="Navigation2D"]
@@ -443,3 +475,10 @@ texture = ExtResource( 28 )
 
 [node name="Node2D" parent="." instance=ExtResource( 36 )]
 position = Vector2( 3053.29, -2019.27 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2( -2.34595, 0.343506 )
+occluder = SubResource( 2 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 3 )

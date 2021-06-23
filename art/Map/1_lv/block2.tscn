@@ -14,12 +14,15 @@ texture = ExtResource( 1 )
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
 polygon = PoolVector2Array( 2.8025, 72.74, -119.968, 136.648, -12.3336, 192.147, 107.073, 126.557 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
 polygon = PoolVector2Array( -117.445, 138.33, 1.96161, 199.715, -0.561091, 225.783, -119.127, 166.92 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+visible = false
 position = Vector2( 125.293, -95.021 )
 polygon = PoolVector2Array( -117.445, 138.33, 1.96161, 199.715, -3.08373, 229.987, -119.127, 166.92 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
